@@ -22,7 +22,7 @@ export default function Weather({ weatherData }) {
 
   React.useEffect(() => {
     displayTemp();
-  }, [weatherData]);
+  });
 
   if (!weatherData)
     return (
