@@ -1,0 +1,17 @@
+.Search {
+  border: 1px solid red;
+  border-radius: 6px;
+  background: antiquewhite;
+  padding: 60px 20px;
+  margin: 15px auto;
+  max-width: 600px;
+}
+
+.Search form {
+  margin: 30px;
+  padding: 20px;
+}
+
+.Search .btn {
+  padding: 8px 20px;
+}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { InfinitySpin } from "react-loader-spinner";
 
+import "./Weather.css";
+
 export default function Weather({ weatherData }) {
   const [temperature, setTemperature] = useState("");
   const [description, setDescription] = useState("");
@@ -29,17 +31,25 @@ export default function Weather({ weatherData }) {
       <InfinitySpin
         visible={true}
         width="200"
-        color="#4fa94d"
+        color="#0D6EFD"
         ariaLabel="infinity-spin-loading"
       />
     );
 
   return (
     <div>
-      <h3>Temperature: {temperature}°C</h3>
-      <h3>Description: {description}</h3>
-      <h3>Humidity: {humidity}%</h3>
-      <h3>Wind: {wind} km/h</h3>
+      <h3>
+        Temperature: <strong>{temperature}°C</strong>
+      </h3>
+      <h3>
+        Description: <strong>{description}</strong>{" "}
+      </h3>
+      <h3>
+        Humidity: <strong>{humidity}%</strong>
+      </h3>
+      <h3>
+        Wind: <strong>{wind} km/h</strong>
+      </h3>
       {iconUrl && <img src={iconUrl} alt="Weather Icon" />}
     </div>
   );

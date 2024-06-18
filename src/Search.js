@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Weather from "./Weather";
 import axios from "axios";
 
+import "./Search.css";
+
 export default function Search() {
   const [city, setCity] = useState(null);
   const [data, setData] = useState(null);
@@ -25,13 +27,20 @@ export default function Search() {
     <div className="Search">
       <h1>Weather Search Engine</h1>
       <form onSubmit={getWeatherData}>
-        <input
-          type="search"
-          placeholder="Enter a City"
-          autoFocus
-          onChange={updateCity}
-        />
-        <input type="submit" value="search" />
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Enter a City"
+              autoFocus
+              onChange={updateCity}
+              className="form-control"
+            />
+          </div>
+          <div className="col-3">
+            <input type="submit" value="search" className="btn btn-primary" />
+          </div>
+        </div>
       </form>
       <br />
       <Weather weatherData={data} />
